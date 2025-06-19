@@ -9,13 +9,27 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { MdWhatsapp } from "react-icons/md";
 
 export default function Footer() {
-
   const router = useRouter();
   return (
-    <footer className="bg-gradient-to-r from-purple-900 to-indigo-900 text-white py-16">
-      <div className="max-w-7xl mx-auto px-6">
+    <footer className="bg-[#0f164a] text-white py-16 relative">
+      <div
+        className="absolute w-[800px] h-[800px] bottom-[20vh] -left-[350px] rounded-full blur-3xl opacity-50 -z-0"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(138, 111, 199, 1) 0%, rgba(46, 42, 107, 0) 80%)",
+        }}></div>
+      <div
+        className="absolute w-[800px] h-[800px] bottom-[50vh] right-[-350px] rounded-full blur-3xl opacity-50 -z-0"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(138, 111, 199, 1) 0%, rgba(46, 42, 107, 0) 80%)",
+        }}></div>
+      <hr className="absolute border-0 bottom-[70vh] h-px w-full bg-gradient-to-r from-transparent via-white/60 to-transparent mt-2" />
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div>
             <div className="mb-4">
@@ -24,8 +38,11 @@ export default function Footer() {
             <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-6">
               Turning your dream ideas into digital reality
             </h2>
-            <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center">
-              <ArrowUpRight onClick={() => router.push("/contact")} className="w-8 h-8 text-white" />
+            <div className="w-16 h-16 bg-gradient-to-r from-[#d297fc] to-purple-600 rounded-full flex items-center justify-center">
+              <ArrowUpRight
+                onClick={() => router.push("/contact")}
+                className="w-8 h-8 text-white"
+              />
             </div>
           </div>
 
@@ -55,24 +72,24 @@ export default function Footer() {
 
             <div className="flex justify-end space-x-6 mt-8">
               <a
-                href="#"
+                href="https://www.instagram.com/dyno.solutions"
                 className="text-white/80 hover:text-white transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/people/Dyno-Solutions/61577346787579/"
                 className="text-white/80 hover:text-white transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://x.com/Dyno_Solutions"
                 className="text-white/80 hover:text-white transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="wa.me/917060140150"
                 className="text-white/80 hover:text-white transition-colors">
-                <Youtube className="w-5 h-5" />
+                <MdWhatsapp className="w-5 h-5" />
               </a>
             </div>
 

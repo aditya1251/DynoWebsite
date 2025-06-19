@@ -104,10 +104,10 @@ export default function ProcessSection() {
             </h2>
           </Copy>
           <Copy delay={0.7}>
-            <p className="text-xl text-black/80 max-w-3xl mx-auto leading-relaxed">
-              We follow a proven methodology to ensure your project is delivered
-              on time and exceeds expectations.
-            </p>
+          <p className="text-xl text-black/80 max-w-3xl mx-auto leading-relaxed">
+            We follow a proven methodology to ensure your project is delivered
+            on time and exceeds expectations.
+          </p>
           </Copy>
         </div>
 

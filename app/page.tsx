@@ -40,9 +40,10 @@ export default function CompleteLandingPage() {
       <JourneySection />
       <ServicesSection />
       <ProjectsSection />
+            <CtaSection />
+
       <ProcessSection />
       {/* <PricingSection /> */}
-      <CtaSection />
       {/* <TestimonialsSection /> */}
       {/* <BlogSection /> */}
       {/* <CtaSection /> */}
