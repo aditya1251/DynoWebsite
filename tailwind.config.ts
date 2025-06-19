@@ -124,6 +124,7 @@ const config: Config = {
 				SpaceMonoRegular: ['SpaceMonoRegular'],
 				GoldmanRegular: ['GoldmanRegular'],
 				Newsreader: ['Newsreader'],
+				UnnaRegular: ['UnnaRegular'],
 			}
 		}
 	},

@@ -40,7 +40,7 @@ export default function FaqSection() {
   ]
 
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white py-20" id="faq">
       <div className="max-w-4xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

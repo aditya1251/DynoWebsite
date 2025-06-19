@@ -36,6 +36,12 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'UnnaRegular';
+  src: url('/fonts/UnnaRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 @layer base {

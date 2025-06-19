@@ -51,10 +51,10 @@ export default function ServicesSection() {
   }, [services.length]);
 
   return (
-    <section className="bg-[#f1f1f3] min-h-screen py-10 md:py-20 shadow-[0_10px_20px_-20px_rgba(0,0,0,0.3)]">
+    <section className="bg-[#f1f1f3] py-10 md:py-20 shadow-[0_10px_20px_-20px_rgba(0,0,0,0.3)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <Copy delay={0.5}>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-SpaceMonoRegular font-bold text-gray-900 mb-6">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-SpaceMonoRegular font-bold text-gray-900 mb-6">
             <span className="inline-flex items-center">
               <MdOutlineKeyboardArrowRight className="text-[#d297fc] rounded-none w-8 h-8 sm:w-10 sm:h-10 md:w-[60px] md:h-[60px]" />
               We Offer A Wide Range Of Design Services.

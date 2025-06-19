@@ -1,18 +1,20 @@
-"use client"
-
-import { useState } from "react"
-import { motion } from "framer-motion"
-import { ArrowLeft, ArrowRight } from "lucide-react"
-import Image from "next/image"
+"use client";
+import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+import Copy from "../animation/Copy";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 export default function ProjectsSection() {
-  const [activeIndex, setActiveIndex] = useState(0)
-
   const projects = [
     {
       id: 1,
       title: "Mobile App UI Design",
-      description: "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting.",
+      description:
+        "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting.",
       image: "/mobile-app-ui.png",
     },
     {
@@ -27,75 +29,83 @@ export default function ProjectsSection() {
       description: "Modern e-commerce solution with seamless user experience.",
       image: "/ecommerce-ui.png",
     },
-  ]
-
-  const nextSlide = () => {
-    setActiveIndex((prev) => (prev === projects.length - 1 ? 0 : prev + 1))
-  }
-
-  const prevSlide = () => {
-    setActiveIndex((prev) => (prev === 0 ? projects.length - 1 : prev - 1))
-  }
+  ];
 
   return (
-    <section className="bg-white py-20">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex justify-between items-center mb-16">
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold text-gray-900"
-          >
-            <span className="text-pink-500">{">"}</span> Projects We Have For Our Clients
-          </motion.h2>
+    <section className="bg-white py-10 sm:py-16 md:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <Copy delay={0.5}>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-SpaceMonoRegular font-bold text-gray-900 mb-4 md:mb-6">
+            <span className="inline-flex items-center">
+              <MdOutlineKeyboardArrowRight className="text-[#d297fc] rounded-none w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-[60px] lg:h-[60px]" />{" "}
+              Projects We Have For Our Clients
+            </span>
+          </h2>
+        </Copy>
 
-          <div className="flex space-x-4">
-            <button
-              onClick={prevSlide}
-              className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center hover:bg-purple-200 transition-colors"
-              aria-label="Previous project"
-            >
-              <ArrowLeft size={20} className="text-purple-600" />
-            </button>
-            <button
-              onClick={nextSlide}
-              className="w-12 h-12 rounded-full bg-purple-500 flex items-center justify-center hover:bg-purple-600 transition-colors"
-              aria-label="Next project"
-            >
-              <ArrowRight size={20} className="text-white" />
-            </button>
-          </div>
-        </div>
-
-        <div className="relative overflow-hidden">
-          <div
-            className="flex transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+        <div className="relative pb-12">
+          <Swiper
+            pagination={{
+              el: '.swiper-pagination',
+              clickable: true
+            }}
+            modules={[Pagination, Autoplay]}
+            className="mySwiper"
+            centeredSlides={true}
+            slidesPerView={1}
+            spaceBetween={20}
+            autoplay={{
+              delay: 7000,
+              disableOnInteraction: true,
+            }}
+            breakpoints={{
+              480: {
+                slidesPerView: 1.2,
+                spaceBetween: 20,
+              },
+              640: {
+                slidesPerView: 1.5,
+                spaceBetween: 25,
+              },
+              768: {
+                slidesPerView: 1.75,
+                spaceBetween: 30,
+              },
+              1024: {
+                slidesPerView: 2.5,
+                spaceBetween: 30,
+              },
+            }}
           >
             {projects.map((project) => (
-              <div key={project.id} className="w-full flex-shrink-0 px-4">
-                <div className="bg-gradient-to-br from-purple-100 to-pink-100 p-8 rounded-3xl">
-                  <div className="bg-purple-200/50 rounded-3xl overflow-hidden p-4">
-                    <Image
-                      src={project.image || "/placeholder.svg"}
-                      alt={project.title}
-                      width={1200}
-                      height={675}
-                      className="w-full h-auto max-h-[400px] object-contain rounded-2xl"
-                    />
-                  </div>
-                  <div className="mt-8 text-center">
-                    <h3 className="text-3xl font-bold text-gray-900 mb-4">{project.title}</h3>
-                    <p className="text-gray-600 text-lg max-w-2xl mx-auto">{project.description}</p>
+              <SwiperSlide key={project.id}>
+                <div className="max-w-2xl mx-auto">
+                  <div className="bg-gradient-to-br from-purple-100 to-pink-100 p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl">
+                    <div className="bg-purple-200/50 rounded-2xl sm:rounded-3xl overflow-hidden p-2 sm:p-4 h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] w-full">
+                      <Image
+                        src={project.image || "/placeholder.svg"}
+                        alt={project.title}
+                        width={600}
+                        height={400}
+                        className="w-full h-full object-cover rounded-xl sm:rounded-2xl"
+                      />
+                    </div>
+                    <div className="mt-4 sm:mt-6 md:mt-8 text-center">
+                      <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-2 sm:mb-3 md:mb-4">
+                        {project.title}
+                      </h3>
+                      <p className="text-gray-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
+                        {project.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </SwiperSlide>
             ))}
-          </div>
+          </Swiper>
+          <div className="swiper-pagination absolute bottom-0 w-full"></div>
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -41,11 +41,11 @@ export default function CompleteLandingPage() {
       <ServicesSection />
       <ProjectsSection />
       <ProcessSection />
-      <PricingSection />
+      {/* <PricingSection /> */}
       <CtaSection />
-      <TestimonialsSection />
-      <BlogSection />
-      <CtaSection />
+      {/* <TestimonialsSection /> */}
+      {/* <BlogSection /> */}
+      {/* <CtaSection /> */}
       <FaqSection />
       <ContactFormSection />
       <Footer />
