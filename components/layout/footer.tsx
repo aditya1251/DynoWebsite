@@ -16,13 +16,13 @@ export default function Footer() {
   return (
     <footer className="bg-[#0f164a] text-white py-16 relative">
       <div
-        className="absolute w-[800px] h-[800px] bottom-[20vh] -left-[350px] rounded-full blur-3xl opacity-50 -z-0"
+        className="absolute w-[800px] h-[800px] pointer-events-none bottom-[20vh] -left-[350px] rounded-full blur-3xl opacity-50 -z-0"
         style={{
           background:
             "radial-gradient(circle, rgba(138, 111, 199, 1) 0%, rgba(46, 42, 107, 0) 80%)",
         }}></div>
       <div
-        className="absolute w-[800px] h-[800px] bottom-[50vh] right-[-350px] rounded-full blur-3xl opacity-50 -z-0"
+        className="absolute w-[800px] h-[800px] pointer-events-none bottom-[50vh] right-[-350px] rounded-full blur-3xl opacity-50 -z-0"
         style={{
           background:
             "radial-gradient(circle, rgba(138, 111, 199, 1) 0%, rgba(46, 42, 107, 0) 80%)",

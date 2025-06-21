@@ -1,10 +1,9 @@
 "use client";
 
-import { Sparkles, ChevronDown, ArrowRight, Dot } from "lucide-react";
+import {  ChevronDown, Dot } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { motion } from "framer-motion";
 
 export default function Header() {
   const router = useRouter();

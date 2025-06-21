@@ -24,13 +24,13 @@ export default function HeroSection() {
     <section className="relative pt-28 bg-[#0f164a] overflow-hidden">
       {/* Radial Gradient Blob */}
       <div
-        className="absolute w-[800px] h-[800px] top-[20vh] -left-[350px] rounded-full blur-3xl opacity-50 -z-0 "
+        className="absolute w-[800px] h-[800px] pointer-events-none top-[20vh] -left-[350px] rounded-full blur-3xl opacity-50 -z-0 "
         style={{
           background:
             "radial-gradient(circle, rgba(138, 111, 199, 1) 0%, rgba(46, 42, 107, 0) 80%)",
         }}></div>
       <div
-        className="absolute w-[800px] h-[800px] top-[50vh] right-[-350px] rounded-full blur-3xl opacity-50 -z-0 "
+        className="absolute w-[800px] h-[800px] pointer-events-none top-[50vh] right-[-350px] rounded-full blur-3xl opacity-50 -z-0 "
         style={{
           background:
             "radial-gradient(circle, rgba(138, 111, 199, 1) 0%, rgba(46, 42, 107, 0) 80%)",

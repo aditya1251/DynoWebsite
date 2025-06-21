@@ -14,13 +14,13 @@ export default function CtaSection() {
   return (
     <section className="relative bg-[#0f164a] py-12 sm:py-16 md:py-20 overflow-hidden">
       <div
-        className="absolute w-[800px] h-[800px] top-[20vh] -left-[350px] rounded-full blur-3xl opacity-50 -z-0"
+        className="absolute w-[800px] h-[800px] pointer-events-none top-[20vh] -left-[350px] rounded-full blur-3xl opacity-50 -z-0"
         style={{
           background: "radial-gradient(circle, rgba(138, 111, 199, 1) 0%, rgba(46, 42, 107, 0) 80%)",
         }}
       ></div>
       <div
-        className="absolute w-[800px] h-[800px] bottom-[20vh] right-[-350px] rounded-full blur-3xl opacity-50 -z-0"
+        className="absolute w-[800px] h-[800px] pointer-events-none bottom-[20vh] right-[-350px] rounded-full blur-3xl opacity-50 -z-0"
         style={{
           background: "radial-gradient(circle, rgba(138, 111, 199, 1) 0%, rgba(46, 42, 107, 0) 80%)",
         }}
